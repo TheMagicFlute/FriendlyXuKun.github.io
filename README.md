@@ -1,19 +1,23 @@
-<h1>Hello, I'm fine. And you?</h1>
-<h2>If you happy, please smile.</h2>
+# Hello, I'm fine. And you?
+
+## Please smile if ur happy.
 
 ```cpp
-#include<iostream>
+#include <iostream>
 #include "myself.h"
-using namespace std;
-int main()
-{
-  string state;
-  state = myself.my_state();
-  if (state == "happy")
-  {
-    myself.smile("happily");
-  }
-  return 0;
-}
-```
 
+using namespace std;
+
+int main(int argc, char *argv)
+{
+    string emotion = myself.emotion();
+
+    if (emotion == "happy")
+    {
+        myself.smile();
+    }
+
+    return 0;
+}
+
+```
