@@ -1,0 +1,97 @@
+.card img {
+    position:absolute;
+    top: -15px; 
+    left: 40px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+hr {
+    background-image: linear-gradient(to right, #000000, #d3d3d3);
+    border: none;
+    height: 2px;
+    margin-top: 100px;
+}
+
+.links a{
+    position:absolute;
+    color: #6da7ff;
+    font-size: 20px;
+    border-radius: 50%;
+    margin-top: 43px;
+    top: 36px; 
+}
+
+.list {
+    list-style-type: none;
+}
+
+.list a {
+    color: #00b7ff;
+    font-weight: bold;
+    line-height: 35px;
+    font-size: 20px;
+    margin-left: 25px;
+}
+
+.list p {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.login-btn {
+    border: none;
+    outline: none;
+    position: absolute;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    margin-left: 420px;
+    margin-top: -28px;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.login-btn:active {
+    background-color: gray;
+}
+
+.second-title {
+    margin-left: 30px; 
+    margin-top: 30px; 
+    line-height: 10px;
+}
+
+.text-frame {
+    border-color: black;
+    border-style: solid; 
+    border-width: 0 0 1.5px; 
+    margin-top: 30px;
+}
+
+.title-text {
+    position: absolute;
+    color: black;
+    font-style: italic;
+    top: 30px; 
+    left: 140px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50;
+    }
+}
