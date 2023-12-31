@@ -12,9 +12,8 @@
         body {
         margin: 0;
         padding: 0;
-        height: 120vh;
-        background: linear-gradient(125deg, #2C3E50, #27AE60,
-            #2980B9);
+        height: 140vh;
+        background: linear-gradient(135deg, #ff5100, #ffb700);
         background-size: 500%;
         animation: backgroundAnimation 15s linear infinite;
         }
@@ -43,8 +42,7 @@
     </div>
     <hr>
     <div class="text-frame">
-        <h1>Hello! What a <span >FINE</span> day it is today!</h1>
-        <h1>And I think I'm very <span>FINE</span>!</h1>
+        <h1 id="countdown"></h1>
      </div>
      <h2 class="second-title">My social account</h2>
      <ul class="list">
@@ -67,13 +65,10 @@
             <a href="./Tools/games.html">Some interesting online games.</a>
         </li>
         <li>
-            <a href="./Tools/calculator.html"
-            style="font-size: 25px; font-style: italic; color: rgb(162, 133, 230);">(New)Calculator</a>
+            <a href="./Tools/calculator.html">Calculator</a>
         </li>
         <li>
-            <a href="./Tools/FlipCardGame.html" 
-            style="font-size: 25px; font-style: italic; color: rgb(162, 133, 230);">(New)Flip Card
-            Game!!!</a>
+            <a href="./Tools/FlipCardGame.html" >Flip Card Game</a>
         </li>
         <li>
             <a href="./Tools/music.html">Jay Chou's music</a>
@@ -102,6 +97,27 @@
                 window.location.href = "https://friendlyxukun.github.io/cn";
              }, 200);
         });
+
+        var targetDate = new Date("January 1, 2024 00:00:00");
+
+        function updateCountdown() {
+            var currentDate = new Date();
+            var timeLeft = targetDate - currentDate;
+
+        if (timeLeft <= 0) {
+            document.getElementById("countdown").innerHTML = "Happy <span>NEW</span> Year!<br>Wish you'll be better this <span>NEW</span> year!";
+            return;
+        }
+
+        var hours = Math.floor(timeLeft / (1000 * 60 * 60));
+        var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("countdown").innerHTML = "There are still <span>" + hours + "h " + minutes + "min " + seconds + "s</span><br> left until New Year's Eve";
+    }
+
+    // 每秒钟更新一次倒计时
+    setInterval(updateCountdown, 5);
     </script>
 </body>
 </html>
