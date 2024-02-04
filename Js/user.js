@@ -1,4 +1,1 @@
-document.getElementById("login").addEventListener("click", function(event) {
-    event.preventDefault();
-    window.location.href = "../index.html";
-});
+document.getElementById("login").addEventListener("click",function(b){b.preventDefault();window.location.href="../index.html"});
